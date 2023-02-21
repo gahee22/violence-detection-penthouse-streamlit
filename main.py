@@ -25,15 +25,14 @@ def main():
         st.subheader("시즌1 1화 excel")
         st.write("----")
         st.write("\n")
-        video_file = open('data/video/output1-17.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
+        df = pd.read_csv('data/excel/result_final_output1-1.csv')
+        st.dataframe(df)
 
     elif add_selectbox == "시즌1 17화 video":
         st.subheader("시즌1 17화 video")
         st.write("----")
         st.write("\n")
-        video_file = open('data/video/output1-19.mp4', 'rb')
+        video_file = open('data/video/output1-17.mp4', 'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
 
@@ -41,15 +40,16 @@ def main():
         st.subheader("시즌1 17화 excel")
         st.write("----")
         st.write("\n")
-        df = pd.read_csv('data/excel/result_final_output1-1.csv')
+        df = pd.read_csv('data/excel/result_final_output1-17.csv')
         st.dataframe(df)
 
     elif add_selectbox == "시즌1 19화 video":
         st.subheader("시즌1 19화 video")
         st.write("----")
         st.write("\n")
-        df = pd.read_csv('data/excel/result_final_output1-17.csv')
-        st.dataframe(df)
+        video_file = open('data/video/output1-19.mp4', 'rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
 
     elif add_selectbox == "시즌1 19화 excel":
         st.subheader("시즌1 19화 excel")
